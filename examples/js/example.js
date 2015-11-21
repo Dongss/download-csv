@@ -7,5 +7,5 @@ function download() {
         ["中文", "逗,号", "示例"]
     ];
 
-    DownloadCsv(headers, content, "example.csv");
+    DownloadCsv(headers, content, "example.csv", "utf-8");
 }

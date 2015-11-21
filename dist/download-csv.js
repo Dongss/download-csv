@@ -3,7 +3,7 @@
     typeof define === 'function' && define.amd ? define(factory) :
     global.DownloadCsv = factory()
 }(this, function() {
-    function DownloadCsv(headers, content, fileName) {
+    function DownloadCsv(headers, content, fileName, charset) {
         var data = [];
 
         data.push(headers);
@@ -25,7 +25,10 @@
 
         csvContent = '"' + csvTmpStr + '"';
 
-        var encodedUri = "data:text/csv;charset=utf-8," + encodeURIComponent(csvContent);
+        var _charset = charset || "utf-8";
+        var encodedUri = "data:text/csv;charset=" 
+            + _charset + ","
+            + encodeURIComponent(csvContent);
         var link = document.createElement("a");
         link.setAttribute("href", encodedUri);
         link.setAttribute("download", fileName);
