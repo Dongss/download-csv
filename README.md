@@ -47,3 +47,5 @@ function download() {
 ```
 
 [Example](https://github.com/Dongss/download-csv/blob/master/examples/example.html)
+
+windows 下请将下载的csv文件另存一遍，选择 `ANSI` 编码
