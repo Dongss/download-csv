@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-	</head>
-    <body>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <div>
+        <pre>
+            function download() {
+                var headers = ["head-1", "head-2", "head-3"];
+                var content = [
+                    [1, 2, 3],
+                    ["do", "u", "code"],
+                    ["csv,vsc", "u,code", "hello,world"],
+                    ["中文", "逗,号", "示例"]
+                ];
+
+                DownloadCsv(headers, content, "example.csv", "utf-8");
+            }
+        </pre>
+    </div>
+    <div>
         <div>
-            <button onclick="download()">
-                download csv
-            </button>           
+            windows 下请将下载的csv文件另存一遍，选择 ANSI 编码
         </div>
-    </body>
-    <script src="../dist/download-csv.js"></script>
-    <script src="./js/example.js"></script>
+        <button onclick="download()">
+            download csv
+        </button>
+    </div>
+</body>
+<script src="../dist/download-csv.js"></script>
+<script src="./js/example.js"></script>
+
 </html>
